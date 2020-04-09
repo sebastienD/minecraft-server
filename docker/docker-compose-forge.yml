@@ -10,13 +10,13 @@ services:
       EULA: "TRUE"
       TYPE: "forge"
       ENABLE_RCON: "true"
-      RCON_PASSWORD: "testing"
+      RCON_PASSWORD: "123secret*"
       RCON_PORT: 28016
     volumes:
-      - "../data/config:/data/config"
-      - "../data/mods:/data/mods"
-      - "../data/world:/data/world"
-      - "../data/modpacks:/modpacks"
+      - "../minecraft/data/config:/data/config"
+      - "../minecraft/data/mods:/data/mods"
+      - "../minecraft/data/world:/data/world"
+      - "../minecraft/modpacks:/modpacks"
   rcon:
     image: itzg/rcon
     container_name: rcon
@@ -24,5 +24,5 @@ services:
       - "4326:4326"
       - "4327:4327"
     volumes:
-      - "../rcon-db:/opt/rcon-web-admin/db"
+      - "../rcon/db:/opt/rcon-web-admin/db"
 
