@@ -2,6 +2,7 @@ version: '3'
 services:
   minecraft:
     image: itzg/minecraft-server
+    container_name: minecraft
     ports:
       - "8282:25565"
       - "28016:28016"
@@ -12,10 +13,13 @@ services:
       RCON_PASSWORD: "testing"
       RCON_PORT: 28016
     volumes:
-      - "../data:/data"
-      - "../modpacks:/modpacks"
+      - "../data/config:/data/config"
+      - "../data/mods:/data/mods"
+      - "../data/world:/data/world"
+      - "../data/modpacks:/modpacks"
   rcon:
     image: itzg/rcon
+    container_name: rcon
     ports:
       - "4326:4326"
       - "4327:4327"
