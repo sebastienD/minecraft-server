@@ -25,4 +25,19 @@ docker container inspect -f "{{.State.Health.Status}}" minecraft
 docker exec minecraft mcstatus localhost
 ```
 
+## Install forge
 
+```
+wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-installer.jar
+```
+
+Lancer l'installation dans le répertoire où se trouve le server.jar.
+```
+java -jar forge-1.15.2-31.1.0-installer.jar --installServer
+```
+
+## Lancer forge
+
+```
+java -Xmx3G -Xms1G -jar -d64 forge-1.15.2-31.1.0.jar nogui
+```
