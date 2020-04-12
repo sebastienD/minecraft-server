@@ -5,6 +5,9 @@
  * https://hub.docker.com/r/itzg/minecraft-server/
  * https://github.com/itzg/docker-minecraft-server/tree/master/examples
 
+ * https://cloud.google.com/solutions/gaming/minecraft-server
+ * https://cloud.google.com/blog/products/gcp/brick-by-brick-learn-gcp-by-setting-up-a-minecraft-server
+
 ## Pour regarder les logs
 
 ```
